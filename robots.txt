@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rafael-rsadigital.github.io/robertaguas24horas/sitemap.xml
+Sitemap: https://robertaguas24horas.vercel.app/sitemap.xml
