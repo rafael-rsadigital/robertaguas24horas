@@ -21,6 +21,10 @@ h1, h2 { color: var(--navy); line-height: 1.15; }
 h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.3rem); }
 h2 { margin: 0 0 10px; font-size: 1.35rem; }
 .profile-header p { margin: 8px 0 24px; }
+.quick-icons { display: flex; justify-content: center; gap: 14px; margin: 0 0 16px; }
+.quick-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgba(6, 29, 85, .28); border-radius: 50%; background: rgba(255, 255, 255, .9); color: var(--navy); box-shadow: 0 4px 10px rgba(6, 29, 85, .1); transition: transform .15s ease, background .15s ease, color .15s ease; }
+.quick-icon:hover, .quick-icon:focus-visible { transform: translateY(-2px); background: var(--navy); color: var(--white); outline: none; }
+.quick-icon .social-icon, .quick-icon .button-icon { width: 20px; height: 20px; }
 .actions { display: grid; gap: 10px; margin-bottom: 24px; }
 .button { display: block; width: 100%; border: 1px solid var(--navy); border-radius: 6px; padding: 13px 16px; background: var(--white); color: var(--navy); font-family: inherit; font-size: 1rem; line-height: 1.5; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; box-shadow: 0 5px 0 rgba(6, 29, 85, .12), 0 8px 18px rgba(6, 29, 85, .1); transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
 .button:hover, .button:focus-visible { transform: translateY(-2px); border-color: var(--blue); background: #edf7ff; outline: none; box-shadow: 0 7px 0 rgba(6, 29, 85, .14), 0 12px 22px rgba(6, 29, 85, .13); }
@@ -32,6 +36,7 @@ h2 { margin: 0 0 10px; font-size: 1.35rem; }
 .request-panel { padding: 0; overflow: hidden; }
 .request-toggle { list-style: none; border: 0; border-radius: 0; background: var(--green); color: var(--white); box-shadow: none; }
 .request-toggle::-webkit-details-marker { display: none; }
+.request-toggle { animation: request-shake .7s ease-in-out 0s 3; }
 .request-toggle::after { content: '+'; float: right; font-size: 1.35rem; line-height: 1.1; }
 .request-panel[open] .request-toggle::after { content: '−'; }
 .request-toggle:hover, .request-toggle:focus-visible { border-color: var(--green-dark); background: var(--green-dark); color: var(--white); box-shadow: none; }
@@ -63,4 +68,13 @@ input:focus, select:focus { border-color: var(--blue); outline: 3px solid rgba(8
 .work-dialog form { position: relative; }
 .work-dialog label { margin-top: 14px; }
 .dialog-close { position: absolute; top: -15px; right: -10px; border: 0; background: transparent; color: var(--navy); font-size: 2rem; cursor: pointer; line-height: 1; }
+@keyframes request-shake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-5px) rotate(-.5deg); }
+  30% { transform: translateX(5px) rotate(.5deg); }
+  45% { transform: translateX(-4px) rotate(-.4deg); }
+  60% { transform: translateX(4px) rotate(.4deg); }
+  75% { transform: translateX(-2px); }
+}
+@media (prefers-reduced-motion: reduce) { .request-toggle { animation: none; } }
 @media (min-width: 600px) { .form-grid { grid-template-columns: 1fr 1fr; } .full { grid-column: 1 / -1; } }
