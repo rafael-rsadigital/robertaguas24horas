@@ -2,6 +2,7 @@ const form = document.querySelector('#delivery-form');
 const status = document.querySelector('#form-status');
 const informLater = document.querySelector('#inform-later');
 const fields = [...form.querySelectorAll('input:not([type="checkbox"])')];
+const requestPanel = document.querySelector('#request-panel');
 const workDialog = document.querySelector('#work-dialog');
 const workButton = document.querySelector('#work-button');
 const workForm = document.querySelector('#work-form');
@@ -15,6 +16,7 @@ informLater.addEventListener('change', () => {
 });
 
 document.querySelector('.floating-whatsapp').addEventListener('click', () => {
+  requestPanel.open = true;
   window.setTimeout(() => document.querySelector('#name').focus(), 350);
 });
 

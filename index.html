@@ -69,7 +69,9 @@
       <p>Robert Águas 24 Horas: entrega de água em Vicente de Carvalho e região.</p>
     </header>
 
-    <section class="request-card" aria-labelledby="request-title">
+    <details class="request-card request-panel" id="request-panel">
+      <summary class="button request-toggle">Solicite uma entrega</summary>
+      <div class="request-content">
       <h2 id="request-title">Solicite uma entrega</h2>
       <p>Preencha os dados. O pedido será encaminhado pelo WhatsApp.</p>
       <form id="delivery-form">
@@ -91,7 +93,8 @@
         <button class="button button-submit" type="submit">Enviar pedido pelo WhatsApp</button>
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
-    </section>
+      </div>
+    </details>
 
     <nav class="actions" aria-label="Links principais">
       <a class="button contact-button" href="tel:+5513991181863" aria-label="Ligar para Robert Águas">

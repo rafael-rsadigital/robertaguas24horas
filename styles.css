@@ -29,6 +29,13 @@ h2 { margin: 0 0 10px; font-size: 1.35rem; }
 .tiktok-icon { fill: currentColor; stroke: none; }
 .request-card, .location, .faq { margin-top: 24px; padding: 22px; background: rgba(255, 255, 255, .96); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 24px rgba(6, 29, 85, .06); }
 .request-card > p, .location > p { margin-top: 0; }
+.request-panel { padding: 0; overflow: hidden; }
+.request-toggle { list-style: none; border: 0; border-radius: 0; background: var(--green); color: var(--white); box-shadow: none; }
+.request-toggle::-webkit-details-marker { display: none; }
+.request-toggle::after { content: '+'; float: right; font-size: 1.35rem; line-height: 1.1; }
+.request-panel[open] .request-toggle::after { content: '−'; }
+.request-toggle:hover, .request-toggle:focus-visible { border-color: var(--green-dark); background: var(--green-dark); color: var(--white); box-shadow: none; }
+.request-content { padding: 22px; }
 .form-grid { display: grid; gap: 14px; }
 label { display: grid; gap: 5px; color: var(--navy); font-size: .95rem; font-weight: 700; }
 input, select { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #aebed2; border-radius: 5px; color: var(--ink); background: var(--white); font: inherit; }
