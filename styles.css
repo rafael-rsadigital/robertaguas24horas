@@ -22,7 +22,7 @@ h1 { margin: 0; font-size: clamp(1.7rem, 5vw, 2.3rem); }
 h2 { margin: 0 0 10px; font-size: 1.35rem; }
 .profile-header p { margin: 8px 0 24px; }
 .actions { display: grid; gap: 10px; margin-bottom: 24px; }
-.button { display: block; width: 100%; border: 1px solid var(--navy); border-radius: 6px; padding: 13px 16px; background: var(--white); color: var(--navy); font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; box-shadow: 0 5px 0 rgba(6, 29, 85, .12), 0 8px 18px rgba(6, 29, 85, .1); transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+.button { display: block; width: 100%; border: 1px solid var(--navy); border-radius: 6px; padding: 13px 16px; background: var(--white); color: var(--navy); font-family: inherit; font-size: 1rem; line-height: 1.5; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; box-shadow: 0 5px 0 rgba(6, 29, 85, .12), 0 8px 18px rgba(6, 29, 85, .1); transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
 .button:hover, .button:focus-visible { transform: translateY(-2px); border-color: var(--blue); background: #edf7ff; outline: none; box-shadow: 0 7px 0 rgba(6, 29, 85, .14), 0 12px 22px rgba(6, 29, 85, .13); }
 .button-icon, .social-icon { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 2; }
 .contact-button, .location-button, .social-button { display: flex; align-items: center; justify-content: center; gap: 9px; }
@@ -35,6 +35,8 @@ input, select { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px s
 input:focus, select:focus { border-color: var(--blue); outline: 3px solid rgba(8, 127, 232, .14); }
 .button-submit { margin-top: 16px; border: 0; background: var(--green); color: var(--white); }
 .button-submit:hover, .button-submit:focus-visible { border-color: var(--green-dark); background: var(--green-dark); color: var(--white); }
+.review-button { border-color: #d9a300; background: #f5c400; color: #332600; }
+.review-button:hover, .review-button:focus-visible { border-color: #b48700; background: #eab900; color: #241b00; }
 .form-status { min-height: 1.3em; margin: 10px 0 0; color: var(--navy); font-size: .9rem; }
 .later-option { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-weight: 400; }
 .later-option input { width: 18px; min-height: 18px; accent-color: var(--blue); }
